@@ -1,0 +1,32 @@
+{
+  "AnonymousTurtle": {
+    "twitch": "https://www.twitch.tv/anonymousturtle",
+    "site": "https://www.redbubble.com/people/TurtlesShop/shop?asc=u",
+    "shop": "https://www.redbubble.com/people/TurtlesShop/shop?asc=u",
+    "instagram": "https://www.instagram.com/ananonymousturtle/",
+    "twitter": "https://twitter.com/AnAnonymousTurt",
+    "shortBio": "I'm Turtle...",
+    "bio": "I'm Turtle, sometimes I make owo art, sometimes I make spowopie art, sometimes I make tacos but mostly I just turtle around twitch saying Hi! :D",
+    "trainCar": "AnonymousTurtle.gif"
+  },
+  "LittleChook": {
+    "twitch": "https://twitter.com/littlech00k",
+    "site": "https://little-chook.com/",
+    "shop": "https://little-chook.com/",
+    "instagram": "https://www.instagram.com/littlechook.twitch/",
+    "twitter": "https://twitter.com/littlech00k",
+    "shortBio": "LittleChook is a digital doodler with a PASSION for chickens...",
+    "bio": "LittleChook is a digital doodler with a PASSION for chickens. Be sure to PEEP her art prints, sticker sets, enamel pins, and much more! Bawk bawk!",
+    "trainCar": "LittleChook.gif"
+  },
+  "MissDaisyDee": {
+    "twitch": "https://twitch.tv/missdaisydee",
+    "site": "https://missdaisydee.com/",
+    "shop": "https://missdaisydee.com/",
+    "instagram": "https://www.instagram.com/missdaisydee/",
+    "twitter": "https://twitter.com/dayzeyed",
+    "shortBio": "Itinerant illustrator, pin designer, ceramics enthusiast...",
+    "bio": "Itinerant illustrator, pin designer, ceramics enthusiast. Packing ink and a sketchbook, always.",
+    "trainCar": "MissDaisyDee.gif"
+  }
+}

@@ -1,74 +1,33 @@
 <html>
 
 <head>
-  <style type="text/css">
-    :root {
-      --train-height: 100px;
-      --car-width: 200px;
-      --animation-duration: 50s;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      width: 100vw;
-      height: var(--train-height);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .train {
-      position: absolute;
-      display: flex;
-      height: var(--train-height);
-      animation: choochoo var(--animation-duration) infinite linear;
-    }
-
-    .train:hover {
-      animation-play-state: paused;
-    }
-
-    .car {
-      position: relative;
-      width: var(--car-width);
-      height: var(--train-height);
-      box-sizing: border-box;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: bottom;
-    }
-
-    @keyframes choochoo {
-      0% {
-        transform: translateX(100vw);
-      }
-
-      80% {
-        transform: translateX(-100%);
-      }
-
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/style.css">
+  <link href="http://fonts.cdnfonts.com/css/barcade-brawl" rel="stylesheet">
+  <script type="application/javascript" src="/app.js"></script>
 </head>
 
-<body>
-  <div class="container">
-    <div class="train">
-      <div class="car car1" style="background-image: url(./images/1.png);"></div>
-      <div class="car car2" style="background-image: url(./images/2.png);"></div>
-      <div class="car car3" style="background-image: url(./images/3.png);"></div>
-      <div class="car car4" style="background-image: url(./images/4.png);"></div>
-      <div class="car car5" style="background-image: url(./images/5.png);"></div>
-      <div class="car car6" style="background-image: url(./images/6.png);"></div>
-      <div class="car car7" style="background-image: url(./images/7.png);"></div>
-      <div class="car car8" style="background-image: url(./images/8.png);"></div>
+<body onload="load()">
+  <div class="header">
+    <img class="logo" src="/images/logo.png">
+    <nav>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Artist Directory</a></li>
+      <li><a href="/">About Us</a></li>
+      <li><a href="/">Donate</a></li>
+    </nav>
+  </div>
+
+  <div class="train-container">
+    <div class="train" id="train">
+      <div class="leading">
+        <img class="sun" src="/images/sun.gif" />
+      </div>
+      <img class="car" src="/images/engine.gif" loading="lazy" />
     </div>
+  </div>
+
+  <div class="footer">
+    <p>NOT AFFILIATED WITH TWITCH.tv<br>however we do have a neopet and it's starving</p>
   </div>
 </body>
 
