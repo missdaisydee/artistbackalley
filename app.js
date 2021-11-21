@@ -23,6 +23,18 @@ function createTrainCar(artistName, artist) {
   car.id = artistName;
   car.classList.add('car');
   car.src = `/images/cars/${artist.trainCar}`;
+  car.addEventListener('click', () => {
+    let dialog = document.getElementById('artist-card-dialog');
+    dialog.querySelector('[name="name"]').textContent = artistName;
+    dialog.querySelector('[name="bio"]').textContent = artist.bio;
+    dialog.querySelector('[name="logo"]').src = `/images/logos/${artist.logo}`;
+    dialog.querySelector('[name="home"]').href = artist.site;
+    dialog.querySelector('[name="shop"]').href = artist.shop;
+    dialog.querySelector('[name="twitch"]').href = artist.twitch;
+    dialog.querySelector('[name="instagram"]').href = artist.instagram;
+    dialog.querySelector('[name="twitter"]').href = artist.twitter;
+    dialog.show();
+  });
   return car;
 }
 
@@ -33,7 +45,24 @@ function createCaboose() {
   return caboose;
 }
 
+function inflateDialogs() {
+  for (const dialog of document.querySelectorAll('.dialog')) {
+    dialog.show = () => {
+      dialog.classList.add('shown');
+    };
+    dialog.dismiss = () => {
+      dialog.classList.remove('shown');
+    };
+    dialog.addEventListener('click', ev => {
+      if (ev.target === dialog) {
+        dialog.dismiss();
+      }
+    });
+  }
+}
+
 async function load() {
+  inflateDialogs();
   let artists = await fetchJson('/data/artists.json');
   let shuffledArtistNames = shuffle(Object.keys(artists));
   let train = document.getElementById('train');
