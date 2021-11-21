@@ -38,17 +38,23 @@ nav, h1, h2, h3, h4, h5, h6 {
   border: 4px solid white;
   border-radius: 25px;
   background-color: rgb(178, 64, 255);
-  display: flex;
-  flex-direction: row;
   position: relative;
   font-size: 12px;
 }
 
-.logo {
-  object-fit: contain;
+.header .logo {
   height: 200px;
   margin-top: -150px;
   margin-bottom: -20px;
+}
+
+.header .sticker {
+  position: absolute;
+  width: 100%;
+  padding-left: 250px;
+  padding-right: 10px;
+  top: -100px;
+  left: 0;
 }
 
 .header nav {
