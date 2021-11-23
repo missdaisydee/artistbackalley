@@ -22,12 +22,12 @@ function createTrainCar(artistName, artist) {
   let car = document.createElement('img');
   car.id = artistName;
   car.classList.add('car');
-  car.src = `/images/cars/${artist.trainCar}`;
+  car.src = `./images/cars/${artist.trainCar}`;
   car.addEventListener('click', () => {
     let dialog = document.getElementById('artist-card-dialog');
     dialog.querySelector('[name="name"]').textContent = artistName;
     dialog.querySelector('[name="bio"]').textContent = artist.bio;
-    dialog.querySelector('[name="logo"]').src = `/images/logos/${artist.logo}`;
+    dialog.querySelector('[name="logo"]').src = `./images/logos/${artist.logo}`;
     dialog.querySelector('[name="home"]').href = artist.site;
     dialog.querySelector('[name="shop"]').href = artist.shop;
     dialog.querySelector('[name="twitch"]').href = artist.twitch;
@@ -41,7 +41,7 @@ function createTrainCar(artistName, artist) {
 function createCaboose() {
   let caboose = document.createElement('img');
   caboose.classList.add('car');
-  caboose.src = "/images/caboose.png";
+  caboose.src = "./images/caboose.png";
   return caboose;
 }
 
@@ -63,7 +63,7 @@ function inflateDialogs() {
 
 async function load() {
   inflateDialogs();
-  let artists = await fetchJson('/data/artists.json');
+  let artists = await fetchJson('./data/artists.json');
   let shuffledArtistNames = shuffle(Object.keys(artists));
   let train = document.getElementById('train');
   for (const artistName of shuffledArtistNames) {
