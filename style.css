@@ -195,7 +195,7 @@ nav li a {
 }
 
 .dialog .artist-card {
-  animation: slide-in 0.5s 1 ease-in;
+  animation: slide-in 0.5s 1 cubic-bezier(.25, .50, .75, 1.2);
 }
 
 .dialog:not(.shown) .artist-card {
