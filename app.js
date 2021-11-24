@@ -49,9 +49,11 @@ function inflateDialogs() {
   for (const dialog of document.querySelectorAll('.dialog')) {
     dialog.show = () => {
       dialog.classList.add('shown');
+      document.body.classList.add('dialog-presented');
     };
     dialog.dismiss = () => {
       dialog.classList.remove('shown');
+      document.body.classList.remove('dialog-presented');
     };
     dialog.addEventListener('click', ev => {
       if (ev.target === dialog) {

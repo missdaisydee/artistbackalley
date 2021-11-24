@@ -149,7 +149,7 @@ nav li a {
   z-index: -1;
 }
 
- .train:hover {
+ .train:hover, body.dialog-presented .train {
   animation-play-state: paused;
 }
 
