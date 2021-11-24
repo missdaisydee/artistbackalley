@@ -7,6 +7,8 @@
   --sun-height: 800px;
   --display-font: 'Barcade Brawl', monospace;
   --pink: rgb(180, 5, 223);
+  --icon-size: 32px;
+  --page-width: 800px;
 }
 
 * {
@@ -17,7 +19,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100%;
   background-image: url('./images/background.png');
   background-position: center;
   background-size: cover;
@@ -56,7 +58,7 @@ a:not([href]) {
   margin-bottom: 100px;
   padding: 5px;
   height: 50px;
-  max-width: 800px;
+  max-width: var(--page-width);
   border: 4px solid white;
   border-radius: 25px;
   background-color: var(--pink);
@@ -202,13 +204,13 @@ nav li a {
 .artist-directory {
   display: grid;
   grid-template-columns: auto auto;
-  max-width: 800px;
+  max-width: var(--page-width);
   margin: auto;
   gap: 8px;
 }
 
 .about-aba, .about-hypertrain, .about-artist-alley {
-  max-width: 800px;
+  max-width: var(--page-width);
   border: 4px solid white;
   border-radius: 16px;
   padding: 16px;
@@ -226,6 +228,32 @@ nav li a {
 
 .about-artist-alley {
   background-color: rgb(19, 186, 4);
+}
+
+.home-icon, .shop-icon, .twitch-icon, .twitter-icon, .instagram-icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: inline-block;
+}
+
+.home-icon {
+  background-image: url('./images/home.svg');
+}
+
+.shop-icon {
+  background-image: url('./images/shop.svg');
+}
+
+.twitch-icon {
+  background-image: url('./images/twitch.svg');
+}
+
+.twitter-icon {
+  background-image: url('./images/twitter.svg');
+}
+
+.instagram-icon {
+  background-image: url('./images/instagram.svg');
 }
 
 @keyframes slide-in {
