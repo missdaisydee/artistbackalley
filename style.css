@@ -24,8 +24,13 @@ body {
   line-height: 1.2em;
 }
 
-nav, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--display-font);
+  text-shadow: 0 2px 0 #ccc, 0 6px 0 black;
+}
+
+h1 {
+  margin-bottom: 2em;
 }
 
 a:not([href]) {
@@ -79,6 +84,10 @@ a:not([href]) {
 nav li a {
   text-decoration: none;
   color: white;
+}
+
+.center {
+  text-align: center;
 }
 
 .train-container {
