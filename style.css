@@ -147,6 +147,11 @@ nav li a {
   border: 4px solid white;
   border-radius: 5px;
   padding: 16px;
+  min-height: 132px;
+  min-width: 200px;
+}
+
+.dialog .artist-card {
   animation: slide-in 0.5s 1 ease-in;
 }
 
@@ -166,6 +171,14 @@ nav li a {
   gap: 8px;
   align-items: center;
   list-style-type: none;
+}
+
+.artist-directory {
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 800px;
+  margin: auto;
+  gap: 8px;
 }
 
 @keyframes slide-in {

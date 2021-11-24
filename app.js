@@ -61,7 +61,51 @@ function inflateDialogs() {
   }
 }
 
-async function load() {
+function createIconLink(iconSrc, href) {
+  let link = document.createElement('a');
+  link.target = '_blank';
+  link.href = href;
+
+  let icon = document.createElement('img');
+  icon.src = iconSrc;
+  icon.width = 32;
+
+  link.appendChild(icon);
+
+  return link;
+}
+
+function createArtistCard(artistName, artist) {
+  let artistCard = document.createElement('div');
+  artistCard.classList.add('artist-card');
+
+  let logo = document.createElement('img');
+  logo.classList.add('logo');
+  logo.src = `../images/logos/${artist.logo}`;
+  artistCard.appendChild(logo);
+
+  let name = document.createElement('h3');
+  name.textContent = artistName;
+  artistCard.appendChild(name);
+
+  let bio = document.createElement('p');
+  bio.textContent = artist.shortBio;
+  artistCard.appendChild(bio);
+
+  let nav = document.createElement('nav');
+
+  nav.appendChild(createIconLink("../images/home.svg", artist.site));
+  nav.appendChild(createIconLink("../images/shop.svg", artist.shop));
+  nav.appendChild(createIconLink("../images/twitch.svg", artist.twitch));
+  nav.appendChild(createIconLink("../images/twitter.svg", artist.twitter));
+  nav.appendChild(createIconLink("../images/instagram.svg", artist.instagram));
+
+  artistCard.appendChild(nav);
+
+  return artistCard;
+}
+
+async function loadHome() {
   inflateDialogs();
   let artists = await fetchJson('./data/artists.json');
   let shuffledArtistNames = shuffle(Object.keys(artists));
@@ -71,4 +115,15 @@ async function load() {
     train.appendChild(car);
   }
   train.appendChild(createCaboose());
+}
+
+async function loadDirectory() {
+  let artists = await fetchJson('../data/artists.json');
+  let artistNames = Object.keys(artists);
+  artistNames.sort((a, b) => a.localeCompare(b));
+  let directory = document.getElementById('artist-directory');
+  for (const artistName of artistNames) {
+    let artistCard = createArtistCard(artistName, artists[artistName]);
+    directory.appendChild(artistCard);
+  }
 }
