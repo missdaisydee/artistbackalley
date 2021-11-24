@@ -61,15 +61,13 @@ function inflateDialogs() {
   }
 }
 
-function createIconLink(iconSrc, href) {
+function createIconLink(iconClass, href) {
   let link = document.createElement('a');
   link.target = '_blank';
   link.href = href;
 
-  let icon = document.createElement('img');
-  icon.src = iconSrc;
-  icon.width = 32;
-
+  let icon = document.createElement('div');
+  icon.classList.add(iconClass);
   link.appendChild(icon);
 
   return link;
@@ -94,11 +92,11 @@ function createArtistCard(artistName, artist) {
 
   let nav = document.createElement('nav');
 
-  nav.appendChild(createIconLink("../images/home.svg", artist.site));
-  nav.appendChild(createIconLink("../images/shop.svg", artist.shop));
-  nav.appendChild(createIconLink("../images/twitch.svg", artist.twitch));
-  nav.appendChild(createIconLink("../images/twitter.svg", artist.twitter));
-  nav.appendChild(createIconLink("../images/instagram.svg", artist.instagram));
+  nav.appendChild(createIconLink('home-icon', artist.site));
+  nav.appendChild(createIconLink('shop-icon', artist.shop));
+  nav.appendChild(createIconLink('twitch-icon', artist.twitch));
+  nav.appendChild(createIconLink('twitter-icon', artist.twitter));
+  nav.appendChild(createIconLink('instagram-icon', artist.instagram));
 
   artistCard.appendChild(nav);
 
