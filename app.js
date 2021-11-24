@@ -40,7 +40,7 @@ function createTrainCar(artistName, artist) {
 
 function createCaboose() {
   let caboose = document.createElement('img');
-  caboose.classList.add('car');
+  caboose.classList.add('caboose');
   caboose.src = "./images/caboose.png";
   return caboose;
 }
