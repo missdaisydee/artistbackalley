@@ -273,7 +273,7 @@ nav li a {
 
 @keyframes slide-in {
   from {
-    transform: translateX(100vw);
+    transform: translateX(100vh);
   }
 
   to {
