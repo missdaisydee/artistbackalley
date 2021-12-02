@@ -42,7 +42,7 @@ $ git push
 
 1. Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) by navigating to:
 
-https://github.com/missdaisydee/artistbackalley/pull/new/<branch name>
+https://github.com/missdaisydee/artistbackalley/pull/new/&lt;branch name&gt;
 
 1. Review the changes in the pull request. You can add other reviewers to provide a sanity check.
 
