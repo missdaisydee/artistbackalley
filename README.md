@@ -2,9 +2,9 @@
 
 ## Running locally
 
-Run `python -m SimpleHTTPServer 8000` from the root directory.
+Run `python -m SimpleHTTPServer 8000` from the root directory, then navigate to http://localhost:8000/ to view the site.
 
-## Updating the artist directory
+## Adding an artist to the artist directory
 
 1. Create a new [branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches):
 
@@ -40,4 +40,10 @@ $ git commit -am "Adding artist <artist name> to the artist directory"
 $ git push
 ```
 
-1. Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+1. Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) by navigating to:
+
+https://github.com/missdaisydee/artistbackalley/pull/new/<branch name>
+
+1. Review the changes in the pull request. You can add other reviewers to provide a sanity check.
+
+1. Merge your change into the `master` branch. At this point your change will go live after the next deployment.
