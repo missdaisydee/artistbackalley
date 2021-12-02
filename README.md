@@ -25,8 +25,8 @@ Add the train car under `images/cars`. Add the logo under `images/logos`.
 * `siteUrl` *(optional)*: A URL for the artist's site.
 * `shopUrl` *(optional)*: A URL for the artist's shop.
 * `twitchHandle` *(optional)*: The artist's Twitch.tv handle.
-* `instagramHandle` *(optional)*: The artist's instagram handle.
-* `twitterHandle` *(optional)*: The artist's twitter handle.
+* `instagramHandle` *(optional)*: The artist's Instagram handle.
+* `twitterHandle` *(optional)*: The artist's Twitter handle.
 
 1. Commit the changes to your branch:
 
