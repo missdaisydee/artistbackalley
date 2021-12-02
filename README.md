@@ -22,11 +22,11 @@ Add the train car under `images/cars`. Add the logo under `images/logos`.
 * `trainCar`: The file name of the artist's train car. Relative to `images/cars`. CASE MATTERS.
 * `bio`: The artist's biography. Up to 3 sentences.
 * `shortBio`: A shortened form of the artist's biography. Only one sentence.
-* `site` *(optional)*: A URL for the artist's site.
-* `shop` *(optional)*: A URL for the artist's shop.
-* `twitch` *(optional)*: A URL for the artist's twitch account.
-* `instagram` *(optional)*: A URL for the artist's instagram account.
-* `twitter` *(optional)*: A URL for the artist's twitter account.
+* `siteUrl` *(optional)*: A URL for the artist's site.
+* `shopUrl` *(optional)*: A URL for the artist's shop.
+* `twitchHandle` *(optional)*: The artist's Twitch.tv handle.
+* `instagramHandle` *(optional)*: The artist's instagram handle.
+* `twitterHandle` *(optional)*: The artist's twitter handle.
 
 1. Commit the changes to your branch:
 
