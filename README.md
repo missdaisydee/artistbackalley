@@ -46,4 +46,12 @@ https://github.com/missdaisydee/artistbackalley/pull/new/&lt;branch name&gt;
 
 1. Review the changes in the pull request. You can add other reviewers to provide a sanity check.
 
-1. Merge your change into the `master` branch. At this point your change will go live after the next deployment.
+1. If you make additional changes, make sure to commit and push again:
+
+```
+$ git commit -am "Fix typo" && git push
+```
+
+The pull request will automatically show the new changes.
+
+2. Merge your change into the `master` branch. At this point your change will go live after the next deployment.
