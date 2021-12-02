@@ -1,46 +1,46 @@
 {
   "AnonymousTurtle": {
     "logo": "anonymousturtle.png",
-    "twitch": "https://www.twitch.tv/anonymousturtle",
-    "site": "https://www.redbubble.com/people/TurtlesShop/shop?asc=u",
-    "shop": "https://www.redbubble.com/people/TurtlesShop/shop?asc=u",
-    "instagram": "https://www.instagram.com/ananonymousturtle/",
-    "twitter": "https://twitter.com/AnAnonymousTurt",
-    "shortBio": "I'm Turtle...",
+    "trainCar": "AnonymousTurtle.gif",
     "bio": "I'm Turtle, sometimes I make owo art, sometimes I make spowopie art, sometimes I make tacos but mostly I just turtle around twitch saying Hi! :D",
-    "trainCar": "AnonymousTurtle.gif"
+    "shortBio": "I'm Turtle...",
+    "siteUrl": "https://www.redbubble.com/people/TurtlesShop/shop?asc=u",
+    "shopUrl": "https://www.redbubble.com/people/TurtlesShop/shop?asc=u",
+    "twitchHandle": "anonymousturtle",
+    "instagramHandle": "ananonymousturtle",
+    "twitterHandle": "AnAnonymousTurt"
   },
   "LittleChook": {
     "logo": "littlechook.png",
-    "twitch": "https://twitter.com/littlech00k",
-    "site": "https://little-chook.com/",
-    "shop": "https://little-chook.com/",
-    "instagram": "https://www.instagram.com/littlechook.twitch/",
-    "twitter": "https://twitter.com/littlech00k",
-    "shortBio": "LittleChook is a digital doodler with a PASSION for chickens...",
+    "trainCar": "LittleChook.gif",
     "bio": "LittleChook is a digital doodler with a PASSION for chickens. Be sure to PEEP her art prints, sticker sets, enamel pins, and much more! Bawk bawk!",
-    "trainCar": "LittleChook.gif"
+    "shortBio": "LittleChook is a digital doodler with a PASSION for chickens...",
+    "siteUrl": "https://little-chook.com/",
+    "shopUrl": "https://little-chook.com/",
+    "twitchHandle": "littlechook",
+    "instagramHandle": "littlechook.twitch",
+    "twitterHandle": "littlech00k"
   },
   "MissDaisyDee": {
     "logo": "missdaisydee.png",
-    "twitch": "https://twitch.tv/missdaisydee",
-    "site": "https://missdaisydee.com/",
-    "shop": "https://missdaisydee.com/",
-    "instagram": "https://www.instagram.com/missdaisydee/",
-    "twitter": "https://twitter.com/dayzeyed",
-    "shortBio": "Itinerant illustrator, pin designer, ceramics enthusiast...",
+    "trainCar": "MissDaisyDee.gif",
     "bio": "Itinerant illustrator, pin designer, ceramics enthusiast. Packing ink and a sketchbook, always.",
-    "trainCar": "MissDaisyDee.gif"
+    "shortBio": "Itinerant illustrator, pin designer, ceramics enthusiast...",
+    "siteUrl": "https://missdaisydee.com/",
+    "shopUrl": "https://missdaisydee.com/",
+    "twitchHandle": "missdaisydee",
+    "instagramHandle": "missdaisydee",
+    "twitterHandle": "dayzeyed"
   },
   "MrCreeep": {
     "logo": "MrCreeep.png",
-    "twitch": "https://twitch.tv/MrCreeep",
-    "site": "http://http//www.Linktr.ee/MrCreeep",
-    "shop": "https://mrcreeep.bigcartel.com/",
-    "instagram": "https://www.instagram.com/mrcreeep93/",
-    "twitter": "https://twitter.com/mrcreeep",
-    "shortBio": "I make cosmic beast and beings.",
+    "trainCar": "MrCreeep.png",
     "bio": "I make cosmic beast and beings.",
-    "trainCar": "MrCreeep.png"
+    "shortBio": "I make cosmic beast and beings.",
+    "siteUrl": "http://http//www.Linktr.ee/MrCreeep",
+    "shopUrl": "https://mrcreeep.bigcartel.com/",
+    "twitchHandle": "MrCreeep",
+    "instagramHandle": "mrcreeep93",
+    "twitterHandle": "mrcreeep"
   }
 }
