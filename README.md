@@ -54,4 +54,6 @@ $ git commit -am "Fix typo" && git push
 
 The pull request will automatically show the new changes.
 
-2. Merge your change into the `master` branch. At this point your change will go live after the next deployment.
+2. Merge your change into the `master` branch by clicking "Squash and merge" on the pull request conversation page. 
+
+At this point your change will go live after the next deployment.
