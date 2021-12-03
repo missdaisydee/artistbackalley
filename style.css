@@ -114,6 +114,9 @@ nav li a {
   width: max-content;
   flex-direction: row;
   align-items: center;
+}
+
+.train.boarded {
   animation: choochoo var(--animation-duration) infinite linear;
 }
 

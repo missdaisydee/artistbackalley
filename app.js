@@ -128,6 +128,7 @@ async function loadHome() {
     train.appendChild(car);
   }
   train.appendChild(createCaboose());
+  train.classList.add('boarded');
 }
 
 async function loadDirectory() {
