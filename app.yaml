@@ -1,0 +1,28 @@
+runtime: nodejs16
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+
+- url: /style\.css
+  static_files: style.css
+  upload: style.css
+
+- url: /app\.js
+  static_files: app.js
+  upload: app.js
+
+- url: /images
+  static_dir: images
+
+- url: /data
+  static_dir: data
+
+- url: /about/?
+  static_files: about/index.html
+  upload: about/index.html
+
+- url: /directory/?
+  static_files: directory/index.html
+  upload: directory/index.html

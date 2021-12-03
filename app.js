@@ -35,7 +35,7 @@ function createTrainCar(artistName, artist) {
   let car = document.createElement('img');
   car.id = artistName;
   car.classList.add('car');
-  car.src = `./images/cars/${artist.trainCar}`;
+  car.src = `/images/cars/${artist.trainCar}`;
   car.addEventListener('click', () => {
     let dialog = document.getElementById('artist-card-dialog');
     dialog.querySelector('[name="name"]').textContent = artistName;
@@ -54,7 +54,7 @@ function createTrainCar(artistName, artist) {
 function createCaboose() {
   let caboose = document.createElement('img');
   caboose.classList.add('caboose');
-  caboose.src = "./images/caboose.png";
+  caboose.src = "/images/caboose.png";
   return caboose;
 }
 
@@ -94,7 +94,7 @@ function createArtistCard(artistName, artist) {
 
   let logo = document.createElement('img');
   logo.classList.add('logo');
-  logo.src = `../images/logos/${artist.logo}`;
+  logo.src = `/images/logos/${artist.logo}`;
   artistCard.appendChild(logo);
 
   let name = document.createElement('h3');
@@ -120,7 +120,7 @@ function createArtistCard(artistName, artist) {
 
 async function loadHome() {
   inflateDialogs();
-  let artists = await fetchJson('./data/artists.json');
+  let artists = await fetchJson('/data/artists.json');
   let shuffledArtistNames = shuffle(Object.keys(artists));
   let train = document.getElementById('train');
   for (const artistName of shuffledArtistNames) {
@@ -131,7 +131,7 @@ async function loadHome() {
 }
 
 async function loadDirectory() {
-  let artists = await fetchJson('../data/artists.json');
+  let artists = await fetchJson('/data/artists.json');
   let artistNames = Object.keys(artists);
   artistNames.sort((a, b) => a.localeCompare(b));
   let directory = document.getElementById('artist-directory');
