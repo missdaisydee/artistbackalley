@@ -12,6 +12,19 @@ function shuffle(array) {
   return array;
 }
 
+function makeTwitchUrl(handle) {
+  if (!handle) return undefined;
+  return `https://www.twitch.tv/${handle}`;
+}
+function makeTwitterUrl(handle) {
+  if (!handle) return undefined;
+  return `https://twitter.com/${handle}`;
+}
+function makeInstagramUrl(handle) {
+  if (!handle) return undefined;
+  return `https://www.instagram.com/${handle}/`;
+}
+
 async function fetchJson(path, init = undefined) {
   let response = await fetch(path, init);
   if (!response.ok) throw new Error(`Failed to fetch ${path}: ${response.status}`);
@@ -28,11 +41,11 @@ function createTrainCar(artistName, artist) {
     dialog.querySelector('[name="name"]').textContent = artistName;
     dialog.querySelector('[name="bio"]').textContent = artist.bio;
     dialog.querySelector('[name="logo"]').src = `./images/logos/${artist.logo}`;
-    dialog.querySelector('[name="home"]').href = artist.site;
-    dialog.querySelector('[name="shop"]').href = artist.shop;
-    dialog.querySelector('[name="twitch"]').href = artist.twitch;
-    dialog.querySelector('[name="instagram"]').href = artist.instagram;
-    dialog.querySelector('[name="twitter"]').href = artist.twitter;
+    dialog.querySelector('[name="home"]').href = artist.siteUrl;
+    dialog.querySelector('[name="shop"]').href = artist.shopUrl;
+    dialog.querySelector('[name="twitch"]').href = makeTwitchUrl(artist.twitchHandle);
+    dialog.querySelector('[name="instagram"]').href = makeInstagramUrl(artist.instagramHandle);
+    dialog.querySelector('[name="twitter"]').href = makeTwitterUrl(artist.twitterHandle);
     dialog.show();
   });
   return car;
@@ -94,11 +107,11 @@ function createArtistCard(artistName, artist) {
 
   let nav = document.createElement('nav');
 
-  nav.appendChild(createIconLink('home-icon', artist.site));
-  nav.appendChild(createIconLink('shop-icon', artist.shop));
-  nav.appendChild(createIconLink('twitch-icon', artist.twitch));
-  nav.appendChild(createIconLink('twitter-icon', artist.twitter));
-  nav.appendChild(createIconLink('instagram-icon', artist.instagram));
+  nav.appendChild(createIconLink('home-icon', artist.siteUrl));
+  nav.appendChild(createIconLink('shop-icon', artist.shopUrl));
+  nav.appendChild(createIconLink('twitch-icon', makeTwitchUrl(artist.twitchHandle)));
+  nav.appendChild(createIconLink('twitter-icon', makeTwitterUrl(artist.twitterHandle)));
+  nav.appendChild(createIconLink('instagram-icon', makeInstagramUrl(artist.instagramHandle)));
 
   artistCard.appendChild(nav);
 
