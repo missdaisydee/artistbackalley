@@ -37,7 +37,6 @@ p {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--display-font);
   line-height: 1.2em;
-  text-shadow: 0 2px 0 #ccc, 0 4px 4px black;
 }
 
 nav {
@@ -163,7 +162,6 @@ nav li a {
   font-family: 'Barcade Brawl', monospace;
   font-size: 10px;
   line-height: 14px;
-  text-shadow: 0 2px 0 #ccc, 0 4px 4px black;
 }
 
 .dialog {

@@ -18,6 +18,7 @@ handlers:
 
 - url: /data
   static_dir: data
+  expiration: '1m'
 
 - url: /about/?
   static_files: about/index.html
