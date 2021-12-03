@@ -42,5 +42,60 @@
     "twitchHandle": "MrCreeep",
     "instagramHandle": "mrcreeep93",
     "twitterHandle": "mrcreeep"
+  },
+  "VeseniaDesigns": {
+    "logo": "VeseniaDesigns2.png",
+    "trainCar": "VeseniaDesigns.gif",
+    "bio": "Vesenia Lindsey of Vesenia Designs; The creator of the manga styled comic book called Celestial Pulse. She's a versatile creator with a myriad of skills; has a strong online presence in the art community; also on Twitch & Youtube, where she streams creating art and helping artist.",
+    "shortBio": "The creator of the manga styled comic book called Celestial Pulse.",
+    "siteUrl": "https://veseniadesigns.wixsite.com/mysite",
+    "shopUrl": "https://vesenia-designs.square.site/",
+    "twitchHandle": "VeseniaDesigns",
+    "instagramHandle": "Vesenia_Designs",
+    "twitterHandle": "Vesenia_Designs"
+  },
+  "DiatomsATTACK": {
+    "logo": "diatomsATTACK.png",
+    "trainCar": "diatomsATTACK.png",
+    "bio": "I am a paleoecologist specializing in microscopic algae known as diatoms. Diatoms have an opaline cell wall that readily fossilizes, allowing me to explore their occurrences over very long time scales. I like making tiny, intricate organisms visible and enjoyable to everyone.",
+    "shortBio": "A paleoecologist specializing in microscopic algae known as diatoms.",
+    "siteUrl": "https://www.instagram.com/jefferyrstone/",
+    "shopUrl": "https://www.redbubble.com/people/DiatomsATTACK/shop",
+    "twitchHandle": "diatomsattack",
+    "instagramHandle": "sem_indiana_state",
+    "twitterHandle": "DiatomsATTACK"
+  },
+  "BattleChsr": {
+    "logo": "battlechsr.png",
+    "trainCar": "battlechsr.gif",
+    "bio": "Self taught traditional and digital artist, illustrator, and designer. Sketch card artist for Upper Deck/Marvel. Old school gamer. Lets do the thing and bring your ideas to life! ",
+    "shortBio": "Self taught traditional and digital artist, illustrator, and designer.",
+    "siteUrl": "https://aaron_roberts.artstation.com/",
+    "shopUrl": "https://www.etsy.com/shop/AARonArtStudio",
+    "twitchHandle": "battlechsr",
+    "instagramHandle": "a.a.ron_art",
+    "twitterHandle": "a.a.ron_art"
+  },
+  "Estherella": {
+    "logo": "Estherella.png",
+    "trainCar": "Estherella.gif",
+    "bio": "Estherella is a digital artist who enjoys drawing happy things! She was inspired to become an artist by the countless media she enjoyed as a kid, and aims to one day work with children in-person or through her art, in hopes of inspiring them to learn and be creative as well. ♥",
+    "shortBio": "A digital artist who enjoys drawing happy things",
+    "siteUrl": "https://linktr.ee/Estherella",
+    "shopUrl": "https://sta.sh/0vz6hexdana",
+    "twitchHandle": "estherella",
+    "instagramHandle": "esth.steph",
+    "twitterHandle": null
+  },
+  "BansheeBoy": {
+    "logo": "BansheeBoy.png",
+    "trainCar": "BansheeBoy.png",
+    "bio": "Hi! My name's Arin. I'm a Toronto based illustrator/streamer who loves anime, ghosts, and art! I create a lot of fanart works as well as original pieces! I hope you enjoy! :)",
+    "shortBio": "Toronto based illustrator/streamer who loves anime, ghosts, and art!",
+    "siteUrl": "https://twitter.com/banshee_boy_",
+    "shopUrl": null,
+    "twitchHandle": "banshee_boy_",
+    "instagramHandle": "banshee.boy",
+    "twitterHandle": "banshee_boy_"
   }
 }
