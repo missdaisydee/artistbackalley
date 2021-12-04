@@ -9,6 +9,8 @@
   --pink: rgb(180, 5, 223);
   --icon-size: 32px;
   --page-width: 800px;
+  background: url('/images/background.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 * {
@@ -18,11 +20,6 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  min-height: 100%;
-  background-image: url('/images/background.png');
-  background-position: center;
-  background-size: cover;
   font-family: 'Menlo', monospace;
   color: white;
   fill: white;
