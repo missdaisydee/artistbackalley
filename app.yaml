@@ -5,13 +5,11 @@ handlers:
   static_files: index.html
   upload: index.html
 
-- url: /style\.css
-  static_files: style.css
-  upload: style.css
+- url: /css
+  static_dir: css
 
-- url: /app\.js
-  static_files: app.js
-  upload: app.js
+- url: /js
+  static_dir: js
 
 - url: /images
   static_dir: images
@@ -20,10 +18,10 @@ handlers:
   static_dir: data
   expiration: '1m'
 
-- url: /about/?
+- url: /about/
   static_files: about/index.html
   upload: about/index.html
 
-- url: /directory/?
+- url: /directory/
   static_files: directory/index.html
   upload: directory/index.html
