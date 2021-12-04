@@ -128,10 +128,13 @@ nav li a {
   margin: auto;
 }
 
-.train .car {
+.train .car, .train.engine {
   height: var(--car-height);
   width: var(--car-width);
   object-fit: contain;
+}
+
+.train .car {
   cursor: pointer;
 }
 

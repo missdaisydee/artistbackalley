@@ -12,6 +12,14 @@ function shuffle(array) {
   return array;
 }
 
+const SUNS = [
+  'eyebrows.gif',
+  'heart.gif',
+  'smooch.gif',
+  'tongue.gif',
+  'wink.gif',
+];
+
 function makeTwitchUrl(handle) {
   if (!handle) return undefined;
   return `https://www.twitch.tv/${handle}`;
@@ -179,6 +187,10 @@ async function animateTrain(train) {
 
 async function loadHome() {
   inflateDialogs();
+  let sunSrc = SUNS[Math.floor(Math.random() * 20)];
+  if (sunSrc) {
+    document.querySelector('.sun').src = sunSrc;
+  }
   let artists = await fetchJson('/data/artists.json');
   let shuffledArtistNames = shuffle(Object.keys(artists));
   let train = document.getElementById('train');
