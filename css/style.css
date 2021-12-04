@@ -103,6 +103,7 @@ nav li a {
 .train-container {
   width: 100%;
   overflow-x: hidden;
+  overflow-y: visible; /* Allow the caboose's smoke cloud to extend over the top. */
 }
 
 .train { 
@@ -142,7 +143,7 @@ nav li a {
   width: 875px;
   height: 548px;
   margin-left: -115px;
-  margin-bottom: 40px;
+  margin-top: -95px;
   z-index: -1;
 }
 
