@@ -189,7 +189,7 @@ async function loadHome() {
   inflateDialogs();
   let sunSrc = SUNS[Math.floor(Math.random() * 20)];
   if (sunSrc) {
-    document.querySelector('.sun').src = sunSrc;
+    document.querySelector('.sun').src = `/images/suns/${sunSrc}`;
   }
   let artists = await fetchJson('/data/artists.json');
   let shuffledArtistNames = shuffle(Object.keys(artists));
