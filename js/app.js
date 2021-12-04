@@ -12,6 +12,14 @@ function shuffle(array) {
   return array;
 }
 
+const SUNS = [
+  'eyebrows.gif',
+  'heart.gif',
+  'smooch.gif',
+  'tongue.gif',
+  'wink.gif',
+];
+
 function makeTwitchUrl(handle) {
   if (!handle) return undefined;
   return `https://www.twitch.tv/${handle}`;
@@ -155,14 +163,15 @@ function runAnimation(frame) {
 async function animateTrain(train) {
   let offset = 0;
   let speed = 0;
-  let maxSpeed = 500;  // px/s
+  let maxSpeed = 400;  // px/s
   window.setTimeout(async () => {
     await runAnimation(elapsed => {
       if (document.querySelector('.dialog-presented')) return;
-      let acc = document.querySelector('.train .car:hover') ? -500 : 500;
       offset += speed * elapsed;
       train.style.transform = `translateX(${-offset}px)`;
       if (offset >= train.offsetWidth) return true;
+      // Slow the train down on hover, otherwise speed it up.
+      let acc = document.querySelector('.train .car:hover') ? -500 : 500;
       speed = Math.max(Math.min(speed + acc * elapsed, maxSpeed), 0);
     });
     setTimeout(() => {
@@ -179,6 +188,10 @@ async function animateTrain(train) {
 
 async function loadHome() {
   inflateDialogs();
+  let sunSrc = SUNS[Math.floor(Math.random() * 20)];
+  if (sunSrc) {
+    document.querySelector('.sun').src = `/images/suns/${sunSrc}`;
+  }
   let artists = await fetchJson('/data/artists.json');
   let shuffledArtistNames = shuffle(Object.keys(artists));
   let train = document.getElementById('train');
