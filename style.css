@@ -116,10 +116,6 @@ nav li a {
   align-items: center;
 }
 
-.train.boarded {
-  animation: choochoo var(--animation-duration) infinite linear;
-}
-
 .train .leading {
   flex-shrink: 0;
   flex-grow: 0;

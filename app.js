@@ -118,6 +118,51 @@ function createArtistCard(artistName, artist) {
   return artistCard;
 }
 
+function runAnimation(frame) {
+  let lastTimestamp = undefined;
+  return new Promise(resolve => {
+    step();
+
+    function step() {
+      window.requestAnimationFrame(timestamp => {
+        if (lastTimestamp != undefined) {
+          if (frame((timestamp - lastTimestamp) / 1000)) {
+            resolve();
+            return;
+          }
+        }
+        lastTimestamp = timestamp;
+        step();
+      });
+    }
+  });
+}
+
+async function animateTrain(train) {
+  let offset = 0;
+  let speed = 0;
+  let maxSpeed = 500;  // px/s
+  window.setTimeout(async () => {
+    await runAnimation(elapsed => {
+      if (document.querySelector('.dialog-presented')) return;
+      let acc = document.querySelector('.train .car:hover') ? -500 : 500;
+      offset += speed * elapsed;
+      train.style.transform = `translateX(${-offset}px)`;
+      if (offset >= train.offsetWidth) return true;
+      speed = Math.max(Math.min(speed + acc * elapsed, maxSpeed), 0);
+    });
+    setTimeout(() => {
+      train.animate([
+        { transform: 'translateX(100vw)' },
+        { transform: 'translateX(0)' }
+      ], { duration: 2000, easing: 'ease-out' }).addEventListener('finish', () => {
+        train.style.transform = 'translateX(0)';
+        animateTrain(train);
+      });
+    }, 5000);
+  }, 5000);
+}
+
 async function loadHome() {
   inflateDialogs();
   let artists = await fetchJson('/data/artists.json');
@@ -128,7 +173,7 @@ async function loadHome() {
     train.appendChild(car);
   }
   train.appendChild(createCaboose());
-  train.classList.add('boarded');
+  animateTrain(train);
 }
 
 async function loadDirectory() {
