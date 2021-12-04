@@ -97,13 +97,15 @@ function createArtistCard(artistName, artist) {
   logo.src = `/images/logos/${artist.logo}`;
   artistCard.appendChild(logo);
 
+  let infoContainer = document.createElement('div');
+
   let name = document.createElement('h3');
   name.textContent = artistName;
-  artistCard.appendChild(name);
+  infoContainer.appendChild(name);
 
   let bio = document.createElement('p');
   bio.textContent = artist.shortBio;
-  artistCard.appendChild(bio);
+  infoContainer.appendChild(bio);
 
   let nav = document.createElement('nav');
 
@@ -113,7 +115,9 @@ function createArtistCard(artistName, artist) {
   nav.appendChild(createIconLink('twitter-icon', makeTwitterUrl(artist.twitterHandle)));
   nav.appendChild(createIconLink('instagram-icon', makeInstagramUrl(artist.instagramHandle)));
 
-  artistCard.appendChild(nav);
+  infoContainer.appendChild(nav);
+
+  artistCard.appendChild(infoContainer);
 
   return artistCard;
 }
