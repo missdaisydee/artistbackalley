@@ -158,6 +158,7 @@ nav li a {
 .footer {
   max-width: 400px;
   margin: auto;
+  margin-top: 64px;
   text-align: center;
 }
 
@@ -202,7 +203,7 @@ nav li a {
 }
 
 .dialog.shown .artist-card {
-  animation: slide-in 0.5s 1 cubic-bezier(.25, .50, .75, 1.2);
+  animation: slide-in 0.25s 1 cubic-bezier(.25, .50, .75, 1.2);
 }
 
 .artist-card h3 {

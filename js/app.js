@@ -48,6 +48,7 @@ function setHref(anchorEl, href) {
 }
 
 function createTrainCar(artistName, artist) {
+  if (!artist.trainCar) return null;
   let car = document.createElement('img');
   car.classList.add('car');
   car.src = `/images/cars/${artist.trainCar}`;
@@ -199,7 +200,9 @@ async function loadHome() {
   let train = document.getElementById('train');
   for (const artistName of shuffledArtistNames) {
     let car = createTrainCar(artistName, artists[artistName]);
-    train.appendChild(car);
+    if (car) {
+      train.appendChild(car);
+    }
   }
   train.appendChild(createCaboose());
   animateTrain(train);
