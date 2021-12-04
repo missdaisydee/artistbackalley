@@ -172,9 +172,16 @@ async function animateTrain(train) {
       offset += speed * elapsed;
       train.style.transform = `translateX(${-offset}px)`;
       if (offset >= train.offsetWidth) return true;
-      // Slow the train down on hover, otherwise speed it up.
-      let acc = document.querySelector('.train .car:hover') ? -500 : 500;
-      speed = Math.max(Math.min(speed + acc * elapsed, maxSpeed), 0);
+      let acc = 500;
+      let hoveredCar = document.querySelector('.train .car:hover');
+      if (hoveredCar) {
+        let boundingRect = hoveredCar.getBoundingClientRect();
+        let center = boundingRect.x + boundingRect.width / 2;
+        let viewportCenter = window.visualViewport.width / 2;
+        let targetSpeed = (center - viewportCenter) / 1;  // Center in 1 second.
+        acc = Math.max(Math.min((targetSpeed - speed) * 10, 500), -500);
+      }
+      speed = Math.max(Math.min(speed + acc * elapsed, maxSpeed), -maxSpeed);
     });
     setTimeout(() => {
       train.animate([
