@@ -31,6 +31,14 @@ async function fetchJson(path, init = undefined) {
   return response.json();
 }
 
+function setHref(anchorEl, href) {
+  if (href) {
+    anchorEl.href = href;
+  } else {
+    anchorEl.removeAttribute('href');
+  }
+}
+
 function createTrainCar(artistName, artist) {
   let car = document.createElement('img');
   car.id = artistName;
@@ -41,11 +49,11 @@ function createTrainCar(artistName, artist) {
     dialog.querySelector('[name="name"]').textContent = artistName;
     dialog.querySelector('[name="bio"]').textContent = artist.bio;
     dialog.querySelector('[name="logo"]').src = `./images/logos/${artist.logo}`;
-    dialog.querySelector('[name="home"]').href = artist.siteUrl;
-    dialog.querySelector('[name="shop"]').href = artist.shopUrl;
-    dialog.querySelector('[name="twitch"]').href = makeTwitchUrl(artist.twitchHandle);
-    dialog.querySelector('[name="instagram"]').href = makeInstagramUrl(artist.instagramHandle);
-    dialog.querySelector('[name="twitter"]').href = makeTwitterUrl(artist.twitterHandle);
+    setHref(dialog.querySelector('[name="home"]'), artist.siteUrl);
+    setHref(dialog.querySelector('[name="shop"]'), artist.shopUrl);
+    setHref(dialog.querySelector('[name="twitch"]'), makeTwitchUrl(artist.twitchHandle));
+    setHref(dialog.querySelector('[name="twitter"]'), makeTwitterUrl(artist.twitterHandle));
+    setHref(dialog.querySelector('[name="instagram"]'), makeInstagramUrl(artist.instagramHandle));
     dialog.show();
   });
   return car;
@@ -79,7 +87,9 @@ function inflateDialogs() {
 function createIconLink(iconClass, href) {
   let link = document.createElement('a');
   link.target = '_blank';
-  link.href = href;
+  if (href) {
+    link.href = href;
+  }
 
   let icon = document.createElement('div');
   icon.classList.add(iconClass);
