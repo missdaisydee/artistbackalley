@@ -170,7 +170,7 @@ async function animateTrain(train) {
       offset += speed * elapsed;
       train.style.transform = `translateX(${-offset}px)`;
       if (offset >= train.offsetWidth) return true;
-      // Slow the train down on hover, other wise speed it up.
+      // Slow the train down on hover, otherwise speed it up.
       let acc = document.querySelector('.train .car:hover') ? -500 : 500;
       speed = Math.max(Math.min(speed + acc * elapsed, maxSpeed), 0);
     });
