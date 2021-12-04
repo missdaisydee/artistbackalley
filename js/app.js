@@ -49,9 +49,10 @@ function setHref(anchorEl, href) {
 
 function createTrainCar(artistName, artist) {
   let car = document.createElement('img');
-  car.id = artistName;
   car.classList.add('car');
   car.src = `/images/cars/${artist.trainCar}`;
+  car.title = artistName;
+  car.alt = artistName;
   car.addEventListener('click', () => {
     let dialog = document.getElementById('artist-card-dialog');
     dialog.querySelector('[name="name"]').textContent = artistName;
@@ -92,7 +93,7 @@ function inflateDialogs() {
   }
 }
 
-function createIconLink(iconClass, href) {
+function createIconLink(iconClass, title, href) {
   let link = document.createElement('a');
   link.target = '_blank';
   if (href) {
@@ -101,6 +102,7 @@ function createIconLink(iconClass, href) {
 
   let icon = document.createElement('div');
   icon.classList.add(iconClass);
+  icon.title = title;
   link.appendChild(icon);
 
   return link;
@@ -127,11 +129,11 @@ function createArtistCard(artistName, artist) {
 
   let nav = document.createElement('nav');
 
-  nav.appendChild(createIconLink('home-icon', artist.siteUrl));
-  nav.appendChild(createIconLink('shop-icon', artist.shopUrl));
-  nav.appendChild(createIconLink('twitch-icon', makeTwitchUrl(artist.twitchHandle)));
-  nav.appendChild(createIconLink('twitter-icon', makeTwitterUrl(artist.twitterHandle)));
-  nav.appendChild(createIconLink('instagram-icon', makeInstagramUrl(artist.instagramHandle)));
+  nav.appendChild(createIconLink('home-icon', 'Homepage', artist.siteUrl));
+  nav.appendChild(createIconLink('shop-icon', 'Shop', artist.shopUrl));
+  nav.appendChild(createIconLink('twitch-icon', 'Twitch', makeTwitchUrl(artist.twitchHandle)));
+  nav.appendChild(createIconLink('twitter-icon', 'Twitter', makeTwitterUrl(artist.twitterHandle)));
+  nav.appendChild(createIconLink('instagram-icon', 'Instagram', makeInstagramUrl(artist.instagramHandle)));
 
   infoContainer.appendChild(nav);
 
