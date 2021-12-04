@@ -4,7 +4,6 @@
 :root {
   --car-height: 516px;
   --car-width: 600px;
-  --animation-duration: 25s;
   --sun-height: 800px;
   --display-font: 'Barcade Brawl', monospace;
   --pink: rgb(180, 5, 223);
@@ -145,10 +144,6 @@ nav li a {
   margin-left: -115px;
   margin-bottom: 40px;
   z-index: -1;
-}
-
- .train:hover, body.dialog-presented .train {
-  animation-play-state: paused;
 }
 
 .footer {
