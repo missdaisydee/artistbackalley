@@ -174,21 +174,23 @@ nav li a {
 }
 
 .artist-card {
-  width: 600px;
+  max-width: 600px;
   background-color: var(--pink);
   border: 4px solid white;
   border-radius: 16px;
   padding: 16px;
   min-height: 132px;
   min-width: 200px;
+  display: flex;
+  gap: 16px;
 }
 
 .dialog .artist-card {
-  animation: slide-in 0.5s 1 cubic-bezier(.25, .50, .75, 1.2);
+  width: 600px;
 }
 
-.dialog:not(.shown) .artist-card {
-  animation-direction: reverse;
+.dialog.shown .artist-card {
+  animation: slide-in 0.5s 1 cubic-bezier(.25, .50, .75, 1.2);
 }
 
 .artist-card h3 {
@@ -196,9 +198,7 @@ nav li a {
 }
 
 .artist-card .logo {
-  float: left;
   height: 100px;
-  margin-right: 16px;
 }
 
 .artist-card nav {
