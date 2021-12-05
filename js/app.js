@@ -122,7 +122,7 @@ function createArtistCard(artistName, artist) {
 
   let infoContainer = document.createElement('div');
 
-  let name = document.createElement('h3');
+  let name = document.createElement('h5');
   name.textContent = artistName;
   infoContainer.appendChild(name);
 
