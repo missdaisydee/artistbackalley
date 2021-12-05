@@ -31,7 +31,7 @@ body {
   font-family: 'Basic', sans-serif;
   color: white;
   fill: white;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 p {
@@ -207,7 +207,7 @@ nav li a {
   animation: slide-in 0.25s 1 cubic-bezier(.25, .50, .75, 1.2);
 }
 
-.artist-card h3 {
+.artist-card h5 {
   margin-top: 0;
 }
 
