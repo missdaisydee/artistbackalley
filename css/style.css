@@ -277,6 +277,22 @@ nav li a {
   background-image: url('/images/instagram.svg');
 }
 
+.twitter-gif {
+  background-image: url('/images/twitter.gif');
+}
+
+.fb-gif {
+  background-image: url('/images/fb.gif');
+}
+
+.instagram-gif {
+  background-image: url('/images/instagram.gif');
+}
+
+.discord-gif {
+  background-image: url('/images/discord.gif');
+}
+
 @keyframes slide-in {
   from {
     transform: translateY(100vh);
