@@ -64,7 +64,9 @@ function createTrainCar(artistName, artist) {
     setHref(dialog.querySelector('[name="twitch"]'), makeTwitchUrl(artist.twitchHandle));
     setHref(dialog.querySelector('[name="twitter"]'), makeTwitterUrl(artist.twitterHandle));
     setHref(dialog.querySelector('[name="instagram"]'), makeInstagramUrl(artist.instagramHandle));
-    dialog.show();
+    window.requestAnimationFrame(() => {
+      dialog.show();
+    });
   });
   return car;
 }
