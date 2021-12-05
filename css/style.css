@@ -241,14 +241,17 @@ nav li a {
 
 .about-aba {
   background-color: rgb(224, 22, 120);
+  position: relative;
 }
 
 .about-hypertrain {
   background-color: rgb(61, 155, 233);
+  position: relative;
 }
 
 .about-artist-alley {
   background-color: rgb(19, 186, 4);
+  position: relative;
 }
 
 .home-icon, .shop-icon, .twitch-icon, .twitter-icon, .instagram-icon {
@@ -275,22 +278,6 @@ nav li a {
 
 .instagram-icon {
   background-image: url('/images/instagram.svg');
-}
-
-.twitter-gif {
-  background-image: url('/images/twitter.gif');
-}
-
-.fb-gif {
-  background-image: url('/images/fb.gif');
-}
-
-.instagram-gif {
-  background-image: url('/images/instagram.gif');
-}
-
-.discord-gif {
-  background-image: url('/images/discord.gif');
 }
 
 @keyframes slide-in {
