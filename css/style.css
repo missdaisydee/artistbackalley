@@ -34,7 +34,7 @@ body {
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -67,21 +67,20 @@ a:not([href]) {
   background-color: var(--pink);
   align-items: center;
   position: relative;
-  font-size: 12px;
+  font-size: 14px;
   gap: 8px;
 }
 
 .header .logo {
-  height: 200px;
-  margin-top: -150px;
-  margin-bottom: -20px;
+  height: 150px;
+  margin-top: -120px;
 }
 
 .header .sticker {
   position: absolute;
   width: 100%;
-  padding-left: 250px;
-  padding-right: 10px;
+  padding-left: 220px;
+  padding-right: 20px;
   top: -100px;
   left: 0;
 }
