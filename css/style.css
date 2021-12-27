@@ -213,6 +213,8 @@ nav li a {
 
 .artist-card .logo {
   height: 100px;
+  width: 100px;
+  object-fit: contain;
 }
 
 .artist-card nav {
